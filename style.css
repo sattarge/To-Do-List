@@ -203,7 +203,7 @@ body{
     .maincont {
     position: relative;
     height: 60vh;
-    width: 60vw;
+    width: 70vw;
     border-radius: 1rem;
     backdrop-filter: blur(50px);
     backface-visibility: visible;

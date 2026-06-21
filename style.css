@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Noto+Nastaliq+Urdu:wght@400..700&display=swap');
+
+
+* {
+    margin: 0%;
+    padding: 0%;
+}
+body{
+    min-height: 100vh;
+    background: linear-gradient(90deg,#e09305, #9d6441);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    font-family: "Black Ops One", system-ui;
+}
+.bg{
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    filter: blur(50px);
+       height: 77vh;
+    width: 70vw;
+    display: flex;
+    animation: 10s linear 5s infinite alternate slide-in;
+}
+@keyframes slide-in {
+    0%{
+        transform: translateY(-100px)  ;
+    }
+    50%{
+        transform: translateX(450px);
+    }
+    100%{
+        transform: translateY(500px);
+    }
+}
+.bgs{
+    position: absolute;
+   border-radius: 10rem;
+   filter: blur(30px);
+   animation: translate 20s linear infinite;
+}
+@keyframes translate{
+    0%{
+        transform: rotate(0deg) translate(50px);
+    }
+    25%{
+        transform: rotate(90deg) translate(100px);
+    }
+    50%{
+        transform: rotate(180deg) translate(150px);
+    }
+    75%{
+        transform: rotate(270deg) translate(200px);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.bg1{
+    width: 420px;
+  height: 320px;
+  background: #e09305;
+  top: -50px;
+  left: -70px;
+}
+.bg2{
+    width: 520px;
+  height: 420px;
+  background: #48041c;
+  right: 30px;
+  top: 40px;
+  border-radius: 30px;
+}
+.bg3{
+    width: 500px;
+  height: 420px;
+  background: #9d6441;
+  right: 70px;
+  bottom: 40px;
+}
+.bg4{
+    width: 320px;
+  height: 420px;
+  border-radius: 70px;
+  background-color: #ff202fc4;
+  bottom: 110px;
+}
+.bg5{
+    width: 412px;
+  height: 360px;
+  border-radius: 5rem;
+  background:#6a040f;
+
+}
+.container{
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    background: 
+    radial-gradient(circle at 100% 40%,#e09305 10%,transparent 43% ),
+    radial-gradient(ellipse at 5% 3%, #370617 0%, transparent 45%),
+    radial-gradient(square at 2% 50%,#6a040f 0%,transparent 60%),
+    linear-gradient(225deg,#faa307 0%,#ffba08 10%, #370617 30%,#6a040f 50%, #e85d04 65%);     
+}
+.maincont {
+    position: relative;
+    height: 60vh;
+    width: 55vw;
+    border-radius: 1rem;
+    backdrop-filter: blur(50px);
+    backface-visibility: visible;
+    -webkit-backface-visibility: visible;
+    overflow: hidden;
+}
+.maincont h1 {
+    color: #e85d04;
+}
+.inputbox{
+    width: 90%;
+    background-color: antiquewhite;
+    margin: 10px;
+    min-width: 20vh;
+    padding: 5px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 1rem;
+}
+.inputbox input{
+    border: none;
+    outline: none;
+    padding: 5px;
+    border-radius: 1rem;
+    width: 40vw;
+}
+.inputbox button{
+    background-color: #e85d04;
+    height: 30px;
+    width: 60px;
+    border: none;
+    outline: none;
+    border-radius: 1rem;
+    padding: 5px;
+    cursor: pointer;
+}
+.list{
+    display: flex;
+    align-items: center;
+    bottom: 10px;
+}
+.task{
+    width: 95%;
+    height: 40vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar{
+    backface-visibility: visible;
+}
+.list li{
+    list-style: none;
+    margin-left: 30px;
+    margin-top: 20px;
+    font-weight: 100;
+    font-size: 15px;
+    word-spacing: 2px;
+    color: #e05a06;
+    font-style: none;
+    position: relative;
+    width: 90%;
+    display: flex;
+    justify-content:space-between;
+    cursor: pointer;
+}
+.list li::before{
+    content: '';
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #6a040f;
+    background-color: #e85d04;
+    top: 8px;
+    left: -25px;
+    margin-top: -15px; 
+}
+.list li.item{
+     text-decoration: 2px  line-through;
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+}
+.list li.item::before{
+    
+    background: url(checks-double-v-svgrepo-com.svg);
+    background-size: cover;
+    border:3px solid #e85d04;
+}
+@media (max-width:450px) {
+    .maincont {
+    position: relative;
+    height: 60vh;
+    width: 60vw;
+    border-radius: 1rem;
+    backdrop-filter: blur(50px);
+    backface-visibility: visible;
+    -webkit-backface-visibility: visible;
+    overflow: hidden;
+}
+.task li img{
+    margin-right: 20px;
+}
+.task {
+    width: 100%;
+    height: 40vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+}
